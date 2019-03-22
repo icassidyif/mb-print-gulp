@@ -1,0 +1,60 @@
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+img
+  max-width: 100%  
+@import "vars";
+@import "mixins";
+
+body
+  font-family: 'PT Sans', sans-serif;
+  .placeholder
+    background: gold
+    height: 200px
+  .placeholder-small
+    @extend .placeholder
+    height: 100px
+  .space-between
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  .title
+    background: $main-color
+    padding: 20px
+    h2
+      font-size: 18px
+      text-transform: uppercase
+      line-height: 14px
+      color: #fff
+      font-weight: 100
+  .title_bg-orange
+    background: #f64801
+  .title_bg-gold
+    background: #ff9d0f
+  .title_bg-yellow
+    background: #ffc034
+  .title_small
+    h2
+      font-size: 14px
+  .service
+    img
+      width: 100%
+      
+@import "grid";
+@import "icons";
+@import "header";
+@import "sidebar"
+[href^="skype:"]
+  font-style: italic
+  text-decoration: none
+  &:before
+    content: ""
+    display: inline-block
+    vertical-align: middle
+    +propToRem(margin-right, 5)
+    background: url('../img/skype.png')
+    +propToRem(width, 18)
+    +propToRem(height, 18)
+@import "footer";
+

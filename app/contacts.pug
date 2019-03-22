@@ -1,0 +1,16 @@
+-var settings = {pageName: 'Контакты'}
+-;
+doctype html
+html(lang="uk")
+  head
+    include includes/head.pug
+    include includes/mixins.pug
+  body
+    include includes/header.pug
+    .wrapper
+      .row
+        .column.column-laptop-1-4
+          include includes/sidebar.pug
+        .column.column-laptop-3-4
+          .placeholder.m-b-30    
+    include includes/footer.pug

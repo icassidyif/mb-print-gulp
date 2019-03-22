@@ -1,0 +1,57 @@
+.header.m-b-30
+  .wrapper
+    .space-between
+      .logo
+        a(href="index.html") 
+          img(src="./img/logo.png")
+        span.m-b-20 Полиграфия европейского уровня за умеренную цену
+      .header__phone.m-b-20
+        h2
+          span (499) 
+          |943-20-94 
+    -
+      var menu= [
+        {
+          name: 'Главная', 
+          path: 'index.html'
+        }, 
+        {
+          name: 'Каталог', 
+          path: '#'
+        }, 
+        {
+          name: 'Услуги', 
+          path: '#'
+        },
+        {
+          name: 'Производство', 
+          path: '#'
+        },
+        {
+          name: 'Новости', 
+          path: '#'
+        },
+        {
+          name: 'Поддержка', 
+          path: '#'
+        },
+        {
+          name: 'Технологии', 
+          path: '#'
+        },
+        {
+          name: 'Контакты', 
+          path: '#'
+        }              
+      ];
+    nav.menu
+      ul
+        each item in menu
+          -;
+          li(class= (settings.pageName == item.name)? 'active': '')
+            a(href=item.path)= item.name
+        li     
+          a.search(href='#')
+            i.fas.fa-search    
+    
+      

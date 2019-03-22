@@ -1,0 +1,64 @@
+
+-
+  var sbmenu= [
+    {
+      name: 'Цифровое',
+      path: '#'
+    },
+    {
+      name: 'Офсетное',
+      path: '#'
+    },
+    {
+      name: 'Шелкография',
+      path: '#'
+    },
+    {
+      name: `Переменные данные, штрих-кодирование`,
+      path: '#'
+    },
+    {
+      name: 'Отделочное',
+      path: '#'
+    }
+  ];
+    
+.title
+  h2 Производство
+.sidebar
+  .sb-menu.m-b-30
+    ul
+      each item in sbmenu
+        li
+          a(href=item.path)= item.name
+            i.fas.fa-angle-down.angle
+-;
+.title.m-b-30
+  h2 Новости
+.article-short
+  .article-short__date
+    span
+      span.red 18.08.
+      |2014
+  .article-short__text.m-b-30
+    span
+      |Начал работу новый формный участок на основе CTP AGFA Palladio II, производительностью 150 форм в смену
+
+.article-short
+  .article-short__date
+    span
+      span.red 18.08.
+      |2014
+  .article-short__text.m-b-30
+    span
+      |Начал работу новый формный участок на основе CTP AGFA Palladio II, производительностью 150 форм в смену. Начал работу новый формный участок на основе CTP AGFA Palladio II, производительностью 150 форм в смену
+
+.article-short
+  .article-short__date
+    span
+      span.red 18.08.
+      |2014
+  .article-short__text.m-b-30
+    span
+      |Начал работу новый формный участок на основе CTP AGFA Palladio II, производительностью 150 форм в смену
+

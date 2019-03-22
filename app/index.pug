@@ -1,0 +1,67 @@
+-var settings = {pageName: 'Главная'}
+-;
+doctype html
+html(lang="uk")
+  head
+    include includes/head.pug
+    include includes/mixins.pug
+  body
+    include includes/header.pug
+    .wrapper
+      .row
+        .column.column-laptop-1-4
+          include includes/sidebar.pug
+        .column.column-laptop-3-4
+          .slider.m-b-30
+            img(src="./img/slider.png")
+          .row
+            -
+              var services = [
+                {
+                  title: 'Цифровая печать',
+                  img: './img/digital-print.png',
+                  path: '#'
+                },
+                {
+                  title: 'Офесная печать',
+                  img: './img/office-print.png',
+                  path: '#'
+                },
+                {
+                  title: 'Финишная обработка',
+                  img: './img/finish-proc.png',
+                  path: '#'
+                },
+                {
+                  title: 'Дизайн, верстка, корректура, перевод',
+                  img: './img/design.png',
+                  path: '#'
+                },
+                {
+                  title: 'Каталог выставки',
+                  img: './img/exibition.png',
+                  path: '#'
+                },
+                {
+                  title: 'ПЕРЕМЕННЫЕ ДАННЫЕ, ШТРИХ-КОДИРОВАНИЕ',
+                  img: './img/zip-code.png',
+                  path: '#'
+                }
+              ];
+            each service in services
+              -;
+              .column.column-laptop-1-3
+                .service.m-b-30                 
+                  img(src= service.img)
+                  .title.title_small
+                    h2= service.title
+              -;
+          .title.m-b-30
+            h2 Каталог
+      .row
+        each $service in '1234567891'
+          -;
+          .column.column-laptop-1-4
+            .placeholder.m-b-30
+    include includes/footer.pug
+    

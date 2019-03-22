@@ -1,0 +1,52 @@
+.logo
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-end
+  img
+    margin-right: $gutter
+    padding: 20px 0
+  span
+    text-transform: uppercase
+.header
+  color: #fff 
+  // min-height: 165px
+  background: url('../img/bg-header.png')
+  &__phone
+    font-size: 20px
+    margin-right: $gutter/2
+    margin-top: auto
+    span
+      font-size: 18px
+.menu
+  ul
+    font-size: 18px
+    line-height: 14px
+    list-style: none
+    display: flex
+    flex-wrap: wrap 
+    li
+      display: flex
+      flex: 1 
+      a
+        display: block
+        padding: 24px 20px
+        color: #434343
+        text-decoration: none
+        text-transform: uppercase
+        background: #e5e5e5
+        width: 100%
+        text-align: center          
+        border-left: 1px solid #c6c6c6
+        &:hover
+          color: black
+          background: #fff
+      .search
+        background: #c6c6c6 
+        font-size: 30px
+        padding: 16px
+        color: #fff
+    .active
+      a
+        color: #740411 
+        background: #c7c7c7
+      

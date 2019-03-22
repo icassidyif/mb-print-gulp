@@ -1,0 +1,39 @@
+.sidebar
+  .sb-menu
+    ul
+      list-style: none
+      li
+        position: relative
+        a
+          display: block
+          text-decoration: none
+          text-transform: uppercase
+          font-size: 14px
+          padding: 20px 70px 20px 20px
+          background: #f8f8f8
+          color: #8c8c8c
+          .angle
+            display: block
+            font-size: 20px
+            line-height: 20px
+            position: absolute
+            z-index: 1
+            right: 20px
+            top: calc(50% - 10px)
+        &:nth-child(odd)
+          a
+            background: #f4f3f3
+.article-short
+  .article-short__date
+    span
+      color: #8c8c8c
+      font-weight: bold
+      .red
+        color: $main-color
+  .article-short__text
+    color: #434343
+    border-bottom: 1px solid $main-color
+    span
+      display: block
+      padding-bottom: 30px
+      
