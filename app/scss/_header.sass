@@ -24,10 +24,14 @@
     list-style: none
     display: flex
     flex-wrap: wrap 
-    li
+    & li
       display: flex
-      flex: 1 
-      a
+      flex: 1
+      &.active
+        a
+          color: #740411 
+          background: #c7c7c7
+      & a
         display: block
         padding: 24px 20px
         color: #434343
@@ -41,12 +45,40 @@
           color: black
           background: #fff
       .search
-        background: #c6c6c6 
-        font-size: 30px
-        padding: 16px
-        color: #fff
-    .active
-      a
-        color: #740411 
-        background: #c7c7c7
+        width: 100%
+        position: relative
+        &.is-active
+          & input
+            width: 250px
+            left: -250px   
+          & > button
+            display: none
+        +breakpoint('tablet') 
+         
+        & input
+          position: absolute
+          top: 0
+          bottom: 0
+          left: 0
+          width: 0
+          z-index: 1
+          font-size: 18px
+          line-height: 14px
+          padding: 0 20px
+          transition: all 0.4s ease
+        &  button
+          display: block
+          background: #c6c6c6 
+          font-size: 30px
+          padding: 16px
+          color: #fff
+          border: none
+          z-index: 1
+          width: 100%
+          outline: none
+        & > button
+          position: absolute
+          right: 0
+          top: 0
+          z-index: 2
       

@@ -51,7 +51,12 @@
           li(class= (settings.pageName == item.name)? 'active': '')
             a(href=item.path)= item.name
         li     
-          a.search(href='#')
-            i.fas.fa-search    
+          .search
+            form
+              input(type="search" name = "search")
+              button(type="submit")
+                i.fas.fa-search
+            button.btn-slide
+              i.fas.fa-search
     
       
