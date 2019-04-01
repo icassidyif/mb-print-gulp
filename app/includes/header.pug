@@ -47,16 +47,14 @@
     nav.menu
       ul
         each item in menu
-          -;
           li(class= (settings.pageName == item.name)? 'active': '')
-            a(href=item.path)= item.name
-        li     
-          .search
-            form
-              input(type="search" name = "search")
-              button(type="submit")
-                i.fas.fa-search
-            button.btn-slide
-              i.fas.fa-search
+           a(href=item.path)= item.name
+      .search
+        form
+          input(type="search" placeholder="Search" name = "search")
+          button(type="submit")
+            i.fas.fa-search
+        button
+          i.fas.fa-search
     
       

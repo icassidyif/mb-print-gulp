@@ -17,13 +17,20 @@
     margin-top: auto
     span
       font-size: 18px
+
 .menu
-  ul
+  +breakpoint(laptop)
+    display: flex
+    flex-wrap: wrap
+  & ul
     font-size: 18px
     line-height: 14px
     list-style: none
     display: flex
-    flex-wrap: wrap 
+    flex-wrap: wrap
+    width: 100%
+    +breakpoint(laptop)
+      width: calc(100% - 80px)
     & li
       display: flex
       flex: 1
@@ -33,52 +40,71 @@
           background: #c7c7c7
       & a
         display: block
-        padding: 24px 20px
+        width: 100%
+        padding: 24px 15px
         color: #434343
         text-decoration: none
         text-transform: uppercase
         background: #e5e5e5
-        width: 100%
-        text-align: center          
+        text-align: center
         border-left: 1px solid #c6c6c6
         &:hover
           color: black
           background: #fff
-      .search
-        width: 100%
-        position: relative
-        &.is-active
-          & input
-            width: 250px
-            left: -250px   
-          & > button
-            display: none
-        +breakpoint('tablet') 
-         
-        & input
-          position: absolute
-          top: 0
-          bottom: 0
-          left: 0
-          width: 0
-          z-index: 1
-          font-size: 18px
-          line-height: 14px
-          padding: 0 20px
-          transition: all 0.4s ease
-        &  button
-          display: block
-          background: #c6c6c6 
-          font-size: 30px
-          padding: 16px
-          color: #fff
-          border: none
-          z-index: 1
-          width: 100%
-          outline: none
-        & > button
-          position: absolute
-          right: 0
-          top: 0
-          z-index: 2
-      
+.search
+  position: relative
+  width: 100%
+  display: flex //
+  justify-content: center //
+  +breakpoint(laptop)
+    display: block
+    width: auto
+  &.is-active
+    & input
+      left: -200px
+      width: 200px
+    & > button
+      display: none
+  & form
+    height: 100%
+    display: flex
+  & button
+    display: block
+    background: #c6c6c6 
+    font-size: 30px
+    color: #fff
+    border: none
+    outline: none
+    width: 80px
+    height: 50px   //
+    position: static //
+    z-index: 2
+    +breakpoint(laptop)
+      height: inherit
+      position: absolute
+    
+  & > button
+    position: absolute
+    top: 0
+    bottom: 0
+    z-index: 2
+    display: none  //
+    +breakpoint(laptop)
+      display: block
+    
+  & input
+    position: static //
+    padding: 0 10px
+    width: 200px //
+    top: 10px
+    bottom: 10px
+    left: 0
+    border-top: 3px solid #62d474
+    border-left: 3px solid #62d474
+    border-right: none
+    border-bottom: 3px solid #62d474
+    transition: all 0.8s ease
+    z-index: 1
+    +breakpoint(laptop)
+      position: absolute
+      width: 0

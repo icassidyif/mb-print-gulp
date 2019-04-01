@@ -1,7 +1,7 @@
 var $ = require("jquery");
 var search = $('.search');
-var btnSlide = $('.btn-slide');
-
+var btnSlide = $('.search > button');
+var btnSubm = $('.search button');
 btnSlide.on('click', function(){
   search.addClass('is-active');
 });
